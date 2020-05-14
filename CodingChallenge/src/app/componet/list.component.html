@@ -1,0 +1,19 @@
+<h1>Current Lists</h1>
+<div *ngFor="let list of lists"> </div>
+
+<h1>Create New List</h1>
+<form #list="ngForm" (ngSubmit)=create(list)>
+    <input type="text" name="owner" value="List Owner">
+    <input type="submit" value="Create List">
+</form>
+
+<h1>Add to List</h1>
+<form #grocery="ngForm" (ngSubmit)=add(grocery)>
+    <input type="text" name="name" value="Name">
+    <br>
+    <input type="text" name="type" value="Type">
+    <br>
+    <input type="number" name="list" value="List to add" placeholder="List to Add">
+    <br>
+    <input type="submit" value="Add to List">
+</form>
